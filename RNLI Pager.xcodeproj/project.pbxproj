@@ -1,0 +1,530 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		96CB625D1B98822400DC215E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CB625C1B98822400DC215E /* main.m */; };
+		96CB62601B98822400DC215E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CB625F1B98822400DC215E /* AppDelegate.m */; };
+		96CB62631B98822400DC215E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CB62621B98822400DC215E /* ViewController.m */; };
+		96CB62661B98822400DC215E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96CB62641B98822400DC215E /* Main.storyboard */; };
+		96CB62681B98822400DC215E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96CB62671B98822400DC215E /* Assets.xcassets */; };
+		96CB626B1B98822400DC215E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96CB62691B98822400DC215E /* LaunchScreen.storyboard */; };
+		96CB62761B98822400DC215E /* RNLI_PagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CB62751B98822400DC215E /* RNLI_PagerTests.m */; };
+		96CB62811B98822400DC215E /* RNLI_PagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CB62801B98822400DC215E /* RNLI_PagerUITests.m */; };
+		96CB628F1B9882EC00DC215E /* LazyInternet in Resources */ = {isa = PBXBuildFile; fileRef = 96CB628E1B9882EC00DC215E /* LazyInternet */; };
+		96CB62931B98843800DC215E /* LazyInternet.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CB62921B98843800DC215E /* LazyInternet.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		96CB62721B98822400DC215E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96CB62501B98822300DC215E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96CB62571B98822400DC215E;
+			remoteInfo = "RNLI Pager";
+		};
+		96CB627D1B98822400DC215E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96CB62501B98822300DC215E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96CB62571B98822400DC215E;
+			remoteInfo = "RNLI Pager";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		96CB62581B98822400DC215E /* RNLI Pager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RNLI Pager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96CB625C1B98822400DC215E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		96CB625E1B98822400DC215E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		96CB625F1B98822400DC215E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		96CB62611B98822400DC215E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		96CB62621B98822400DC215E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		96CB62651B98822400DC215E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		96CB62671B98822400DC215E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		96CB626A1B98822400DC215E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		96CB626C1B98822400DC215E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96CB62711B98822400DC215E /* RNLI PagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RNLI PagerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96CB62751B98822400DC215E /* RNLI_PagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNLI_PagerTests.m; sourceTree = "<group>"; };
+		96CB62771B98822400DC215E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96CB627C1B98822400DC215E /* RNLI PagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RNLI PagerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96CB62801B98822400DC215E /* RNLI_PagerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNLI_PagerUITests.m; sourceTree = "<group>"; };
+		96CB62821B98822400DC215E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96CB628E1B9882EC00DC215E /* LazyInternet */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LazyInternet; sourceTree = "<group>"; };
+		96CB62921B98843800DC215E /* LazyInternet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LazyInternet.m; path = "RNLI Pager/LazyInternet/LazyInternet.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		96CB62551B98822400DC215E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96CB626E1B98822400DC215E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96CB62791B98822400DC215E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		96CB624F1B98822300DC215E = {
+			isa = PBXGroup;
+			children = (
+				96CB62921B98843800DC215E /* LazyInternet.m */,
+				96CB625A1B98822400DC215E /* RNLI Pager */,
+				96CB62741B98822400DC215E /* RNLI PagerTests */,
+				96CB627F1B98822400DC215E /* RNLI PagerUITests */,
+				96CB62591B98822400DC215E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		96CB62591B98822400DC215E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				96CB62581B98822400DC215E /* RNLI Pager.app */,
+				96CB62711B98822400DC215E /* RNLI PagerTests.xctest */,
+				96CB627C1B98822400DC215E /* RNLI PagerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		96CB625A1B98822400DC215E /* RNLI Pager */ = {
+			isa = PBXGroup;
+			children = (
+				96CB628E1B9882EC00DC215E /* LazyInternet */,
+				96CB625E1B98822400DC215E /* AppDelegate.h */,
+				96CB625F1B98822400DC215E /* AppDelegate.m */,
+				96CB62611B98822400DC215E /* ViewController.h */,
+				96CB62621B98822400DC215E /* ViewController.m */,
+				96CB62641B98822400DC215E /* Main.storyboard */,
+				96CB62671B98822400DC215E /* Assets.xcassets */,
+				96CB62691B98822400DC215E /* LaunchScreen.storyboard */,
+				96CB626C1B98822400DC215E /* Info.plist */,
+				96CB625B1B98822400DC215E /* Supporting Files */,
+			);
+			path = "RNLI Pager";
+			sourceTree = "<group>";
+		};
+		96CB625B1B98822400DC215E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				96CB625C1B98822400DC215E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		96CB62741B98822400DC215E /* RNLI PagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				96CB62751B98822400DC215E /* RNLI_PagerTests.m */,
+				96CB62771B98822400DC215E /* Info.plist */,
+			);
+			path = "RNLI PagerTests";
+			sourceTree = "<group>";
+		};
+		96CB627F1B98822400DC215E /* RNLI PagerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				96CB62801B98822400DC215E /* RNLI_PagerUITests.m */,
+				96CB62821B98822400DC215E /* Info.plist */,
+			);
+			path = "RNLI PagerUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		96CB62571B98822400DC215E /* RNLI Pager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96CB62851B98822400DC215E /* Build configuration list for PBXNativeTarget "RNLI Pager" */;
+			buildPhases = (
+				96CB62541B98822400DC215E /* Sources */,
+				96CB62551B98822400DC215E /* Frameworks */,
+				96CB62561B98822400DC215E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RNLI Pager";
+			productName = "RNLI Pager";
+			productReference = 96CB62581B98822400DC215E /* RNLI Pager.app */;
+			productType = "com.apple.product-type.application";
+		};
+		96CB62701B98822400DC215E /* RNLI PagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96CB62881B98822400DC215E /* Build configuration list for PBXNativeTarget "RNLI PagerTests" */;
+			buildPhases = (
+				96CB626D1B98822400DC215E /* Sources */,
+				96CB626E1B98822400DC215E /* Frameworks */,
+				96CB626F1B98822400DC215E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				96CB62731B98822400DC215E /* PBXTargetDependency */,
+			);
+			name = "RNLI PagerTests";
+			productName = "RNLI PagerTests";
+			productReference = 96CB62711B98822400DC215E /* RNLI PagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		96CB627B1B98822400DC215E /* RNLI PagerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96CB628B1B98822400DC215E /* Build configuration list for PBXNativeTarget "RNLI PagerUITests" */;
+			buildPhases = (
+				96CB62781B98822400DC215E /* Sources */,
+				96CB62791B98822400DC215E /* Frameworks */,
+				96CB627A1B98822400DC215E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				96CB627E1B98822400DC215E /* PBXTargetDependency */,
+			);
+			name = "RNLI PagerUITests";
+			productName = "RNLI PagerUITests";
+			productReference = 96CB627C1B98822400DC215E /* RNLI PagerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		96CB62501B98822300DC215E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = OverByThere;
+				TargetAttributes = {
+					96CB62571B98822400DC215E = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = XG8MH979S4;
+					};
+					96CB62701B98822400DC215E = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 96CB62571B98822400DC215E;
+					};
+					96CB627B1B98822400DC215E = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 96CB62571B98822400DC215E;
+					};
+				};
+			};
+			buildConfigurationList = 96CB62531B98822400DC215E /* Build configuration list for PBXProject "RNLI Pager" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 96CB624F1B98822300DC215E;
+			productRefGroup = 96CB62591B98822400DC215E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				96CB62571B98822400DC215E /* RNLI Pager */,
+				96CB62701B98822400DC215E /* RNLI PagerTests */,
+				96CB627B1B98822400DC215E /* RNLI PagerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		96CB62561B98822400DC215E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96CB626B1B98822400DC215E /* LaunchScreen.storyboard in Resources */,
+				96CB628F1B9882EC00DC215E /* LazyInternet in Resources */,
+				96CB62681B98822400DC215E /* Assets.xcassets in Resources */,
+				96CB62661B98822400DC215E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96CB626F1B98822400DC215E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96CB627A1B98822400DC215E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		96CB62541B98822400DC215E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96CB62631B98822400DC215E /* ViewController.m in Sources */,
+				96CB62601B98822400DC215E /* AppDelegate.m in Sources */,
+				96CB625D1B98822400DC215E /* main.m in Sources */,
+				96CB62931B98843800DC215E /* LazyInternet.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96CB626D1B98822400DC215E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96CB62761B98822400DC215E /* RNLI_PagerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96CB62781B98822400DC215E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96CB62811B98822400DC215E /* RNLI_PagerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		96CB62731B98822400DC215E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 96CB62571B98822400DC215E /* RNLI Pager */;
+			targetProxy = 96CB62721B98822400DC215E /* PBXContainerItemProxy */;
+		};
+		96CB627E1B98822400DC215E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 96CB62571B98822400DC215E /* RNLI Pager */;
+			targetProxy = 96CB627D1B98822400DC215E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		96CB62641B98822400DC215E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96CB62651B98822400DC215E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		96CB62691B98822400DC215E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96CB626A1B98822400DC215E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		96CB62831B98822400DC215E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		96CB62841B98822400DC215E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		96CB62861B98822400DC215E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "RNLI Pager/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.overbythere.RNLI-Pager";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		96CB62871B98822400DC215E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "RNLI Pager/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.overbythere.RNLI-Pager";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		96CB62891B98822400DC215E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "RNLI PagerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.overbythere.RNLI-PagerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RNLI Pager.app/RNLI Pager";
+			};
+			name = Debug;
+		};
+		96CB628A1B98822400DC215E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "RNLI PagerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.overbythere.RNLI-PagerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RNLI Pager.app/RNLI Pager";
+			};
+			name = Release;
+		};
+		96CB628C1B98822400DC215E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "RNLI PagerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.overbythere.RNLI-PagerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "RNLI Pager";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		96CB628D1B98822400DC215E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "RNLI PagerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.overbythere.RNLI-PagerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "RNLI Pager";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		96CB62531B98822400DC215E /* Build configuration list for PBXProject "RNLI Pager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96CB62831B98822400DC215E /* Debug */,
+				96CB62841B98822400DC215E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96CB62851B98822400DC215E /* Build configuration list for PBXNativeTarget "RNLI Pager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96CB62861B98822400DC215E /* Debug */,
+				96CB62871B98822400DC215E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		96CB62881B98822400DC215E /* Build configuration list for PBXNativeTarget "RNLI PagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96CB62891B98822400DC215E /* Debug */,
+				96CB628A1B98822400DC215E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		96CB628B1B98822400DC215E /* Build configuration list for PBXNativeTarget "RNLI PagerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96CB628C1B98822400DC215E /* Debug */,
+				96CB628D1B98822400DC215E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 96CB62501B98822300DC215E /* Project object */;
+}
