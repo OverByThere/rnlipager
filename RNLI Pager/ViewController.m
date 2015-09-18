@@ -49,6 +49,7 @@
 
 -(IBAction)refreshData:(id)sender {
     [getList startDownload:@"https://overbythere.co.uk/apps/rnli/list.php" withDelegate:self withUnique:@"fulllist"];
+    [updateTime setTitle:@"Loading..."];
 }
 
 
@@ -60,11 +61,12 @@
 -(UITableViewCell *)tableView:(nonnull UITableView *)tv cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RNLILaunch"];
     //[cell set]
-    NSArray *allKeys = [[dict objectForKey:@"launches"] allKeys];
+    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:nil ascending:NO selector:@selector(caseInsensitiveCompare:)];
+    NSArray *allKeys = [[[dict objectForKey:@"launches"] allKeys] sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]];
     NSMutableDictionary *ourData = [[dict objectForKey:@"launches"] objectForKey:[allKeys objectAtIndex:indexPath.row]];
     if(dict) {
         [[cell textLabel] setText:[ourData objectForKey:@"name"]];
-        [[cell detailTextLabel] setText:[ourData objectForKey:@"nicetime"]];
+        [[cell detailTextLabel] setText:[ourData objectForKey:@"date"]];
     }
     else { [[cell textLabel] setText:@"Loading..."]; }
     return cell;
