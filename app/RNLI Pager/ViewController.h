@@ -11,8 +11,9 @@
 
 @interface ViewController : UIViewController <LazyInternetDelegate, UITableViewDataSource, UITableViewDelegate> {
     LazyInternet *getList;
-    UITableView *tableView;
     NSMutableDictionary *dict;
+    IBOutlet UITableView *tableView;
+    IBOutlet UIBarButtonItem *updateTime;
 }
 
 

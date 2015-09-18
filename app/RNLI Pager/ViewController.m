@@ -18,20 +18,37 @@
     [super viewDidLoad];
     getList = [[LazyInternet alloc] init];
     [getList startDownload:@"https://overbythere.co.uk/apps/rnli/list.php" withDelegate:self withUnique:@"fulllist"];
-    tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
-    [[self view] addSubview:tableView];
-    [tableView setDataSource:self];
     [tableView setDelegate:self];
+    [tableView setDataSource:self];
+    [updateTime setTitle:@"Loading..."];
+    [updateTime setTitleTextAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:12]} forState:UIControlStateNormal];
 }
 
 -(void)lazyInternetDidLoad:(NSData *)data withUnique:(id)unique {
     NSError *error;
     dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-    if(!dict) {
-        NSLog(@"%@",error);
+    if(!dict) { NSLog(@"%@",error); }
+    NSLog(@"We got data.");
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    
+    if ([paths count] > 0) {
+        // http://iosdevelopertips.com/data-file-management/read-and-write-nsarray-nsdictionary-and-nsset-to-a-file.html
+        NSString *dictPath = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"dict.out"];
+        [dict writeToFile:dictPath atomically:YES];
+        
+        NSURL *fileUrl = [NSURL fileURLWithPath:dictPath];
+        NSDate *fileDate;
+        [fileUrl getResourceValue:&fileDate forKey:NSURLContentModificationDateKey error:&error];
+        NSString *dateString = [NSDateFormatter localizedStringFromDate:fileDate dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterShortStyle];
+        if (error) { NSLog(@"%@",error); }
+        else { [updateTime setTitle:[NSString stringWithFormat:@"Last updated %@",dateString]]; }
     }
-    //NSLog(@"%@",dict);
     [tableView reloadData];
+}
+
+-(IBAction)refreshData:(id)sender {
+    [getList startDownload:@"https://overbythere.co.uk/apps/rnli/list.php" withDelegate:self withUnique:@"fulllist"];
 }
 
 
@@ -40,8 +57,8 @@
     return 1;
 }
 
--(UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"launchcell"];
+-(UITableViewCell *)tableView:(nonnull UITableView *)tv cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RNLILaunch"];
     //[cell set]
     NSArray *allKeys = [[dict objectForKey:@"launches"] allKeys];
     NSMutableDictionary *ourData = [[dict objectForKey:@"launches"] objectForKey:[allKeys objectAtIndex:indexPath.row]];
