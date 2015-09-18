@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     getList = [[LazyInternet alloc] init];
-    [getList startDownload:@"https://overbythere.co.uk/apps/rnli/list.php" withDelegate:self withUnique:@"fulllist"];
+    [self refreshData:nil];
     [tableView setDelegate:self];
     [tableView setDataSource:self];
     [updateTime setTitle:@"Loading..."];
@@ -52,9 +52,26 @@
     [updateTime setTitle:@"Loading..."];
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:nil ascending:NO selector:@selector(caseInsensitiveCompare:)];
+    NSArray *sectKeys = [[[dict objectForKey:@"launches"] allKeys] sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]];
+    NSString *dateString = [sectKeys objectAtIndex:section];
+    NSArray *dateArray = [dateString componentsSeparatedByString: @" "];
+    NSString *unixDate = [dateArray objectAtIndex: 0];
+    
+    return [dateString stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"%@ ",unixDate] withString:@""];
+}
 
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return [[[dict objectForKey:@"launches"] allKeys] count];
+}
 -(NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if(dict) { return [[[dict objectForKey:@"launches"] allKeys] count]; }
+    if(dict) {
+        NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:nil ascending:NO selector:@selector(caseInsensitiveCompare:)];
+        NSArray *sectKeys = [[[dict objectForKey:@"launches"] allKeys] sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]];
+        NSMutableDictionary *sectData = [[dict objectForKey:@"launches"] objectForKey:[sectKeys objectAtIndex:section]];
+        return [[sectData allKeys] count];
+    }
     return 1;
 }
 
@@ -62,11 +79,15 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RNLILaunch"];
     //[cell set]
     NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:nil ascending:NO selector:@selector(caseInsensitiveCompare:)];
-    NSArray *allKeys = [[[dict objectForKey:@"launches"] allKeys] sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]];
-    NSMutableDictionary *ourData = [[dict objectForKey:@"launches"] objectForKey:[allKeys objectAtIndex:indexPath.row]];
+    NSArray *sectKeys = [[[dict objectForKey:@"launches"] allKeys] sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]];
+    NSMutableDictionary *sectData = [[dict objectForKey:@"launches"] objectForKey:[sectKeys objectAtIndex:indexPath.section]];
+    
+    NSArray *cellKeys = [[sectData allKeys] sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]];
+    NSMutableDictionary *cellData = [sectData objectForKey:[cellKeys objectAtIndex:indexPath.row]];
+    
     if(dict) {
-        [[cell textLabel] setText:[NSString stringWithFormat:@"%@ - %@",[ourData objectForKey:@"name"],[ourData objectForKey:@"time"]]];
-        [[cell detailTextLabel] setText:[ourData objectForKey:@"date"]];
+        [[cell textLabel] setText:[NSString stringWithFormat:@"%@ - %@",[cellData objectForKey:@"name"],[cellData objectForKey:@"time"]]];
+        [[cell detailTextLabel] setText:[cellData objectForKey:@"date"]];
     }
     else { [[cell textLabel] setText:@"Loading..."]; }
     return cell;
