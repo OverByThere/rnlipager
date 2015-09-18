@@ -65,7 +65,7 @@
     NSArray *allKeys = [[[dict objectForKey:@"launches"] allKeys] sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]];
     NSMutableDictionary *ourData = [[dict objectForKey:@"launches"] objectForKey:[allKeys objectAtIndex:indexPath.row]];
     if(dict) {
-        [[cell textLabel] setText:[ourData objectForKey:@"name"]];
+        [[cell textLabel] setText:[NSString stringWithFormat:@"%@ - %@",[ourData objectForKey:@"name"],[ourData objectForKey:@"time"]]];
         [[cell detailTextLabel] setText:[ourData objectForKey:@"date"]];
     }
     else { [[cell textLabel] setText:@"Loading..."]; }
