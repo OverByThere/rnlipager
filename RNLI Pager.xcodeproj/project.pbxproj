@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37E744AE1BAEF37400D00BCD /* full-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 37E744AD1BAEF37400D00BCD /* full-logo.png */; settings = {ASSET_TAGS = (); }; };
 		96CB625D1B98822400DC215E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CB625C1B98822400DC215E /* main.m */; };
 		96CB62601B98822400DC215E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CB625F1B98822400DC215E /* AppDelegate.m */; };
 		96CB62631B98822400DC215E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CB62621B98822400DC215E /* ViewController.m */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		37E744AD1BAEF37400D00BCD /* full-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "full-logo.png"; sourceTree = "<group>"; };
 		96CB62581B98822400DC215E /* RNLI Pager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RNLI Pager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96CB625C1B98822400DC215E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		96CB625E1B98822400DC215E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 		96CB625A1B98822400DC215E /* RNLI Pager */ = {
 			isa = PBXGroup;
 			children = (
+				37E744AD1BAEF37400D00BCD /* full-logo.png */,
 				96CB628E1B9882EC00DC215E /* LazyInternet */,
 				96CB625E1B98822400DC215E /* AppDelegate.h */,
 				96CB625F1B98822400DC215E /* AppDelegate.m */,
@@ -252,6 +255,7 @@
 			files = (
 				96CB626B1B98822400DC215E /* LaunchScreen.storyboard in Resources */,
 				96CB628F1B9882EC00DC215E /* LazyInternet in Resources */,
+				37E744AE1BAEF37400D00BCD /* full-logo.png in Resources */,
 				96CB62681B98822400DC215E /* Assets.xcassets in Resources */,
 				96CB62661B98822400DC215E /* Main.storyboard in Resources */,
 			);
@@ -507,6 +511,7 @@
 				96CB62871B98822400DC215E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		96CB62881B98822400DC215E /* Build configuration list for PBXNativeTarget "RNLI PagerTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +520,7 @@
 				96CB628A1B98822400DC215E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		96CB628B1B98822400DC215E /* Build configuration list for PBXNativeTarget "RNLI PagerUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +529,7 @@
 				96CB628D1B98822400DC215E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
