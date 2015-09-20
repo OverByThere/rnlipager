@@ -50,6 +50,9 @@
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <connections>
+                                            <segue destination="EpX-SS-L5s" kind="show" identifier="sendToStation" id="oZ5-E2-9T0"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -97,6 +100,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bWw-ZN-sBz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-119" y="220"/>
+        </scene>
+        <!--Station View Controller-->
+        <scene sceneID="5a6-25-6SW">
+            <objects>
+                <viewController id="EpX-SS-L5s" customClass="StationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QwR-eJ-Xxc"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zhc-xG-U5g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FSb-Mc-wPD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Text" translatesAutoresizingMaskIntoConstraints="NO" id="Zen-0Z-Rae">
+                                <rect key="frame" x="20" y="102" width="280" height="358"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.2181699275970459" blue="0.46295952796936035" alpha="0.23804952330508475" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="launchOutput" destination="Zen-0Z-Rae" id="2eH-t5-aid"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ejs-mg-k1c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="282" y="220"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="k81-en-f8u">

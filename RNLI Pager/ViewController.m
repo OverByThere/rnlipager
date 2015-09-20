@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "StationViewController.h"
 
 @interface ViewController ()
 
@@ -75,9 +76,22 @@
     return 1;
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell *)sender {
+    if ([[segue identifier] isEqualToString:@"sendToStation"]) {
+        StationViewController *vc = [segue destinationViewController];
+        NSIndexPath *currentPath = [tableView indexPathForSelectedRow];
+        NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:nil ascending:NO selector:@selector(caseInsensitiveCompare:)];
+        NSArray *sectKeys = [[[dict objectForKey:@"launches"] allKeys] sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]];
+        NSMutableDictionary *sectData = [[dict objectForKey:@"launches"] objectForKey:[sectKeys objectAtIndex:currentPath.section]];
+        
+        NSArray *cellKeys = [[sectData allKeys] sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]];
+        [vc setOurDict:[sectData objectForKey:[cellKeys objectAtIndex:currentPath.row]]];
+    }
+}
+
 -(UITableViewCell *)tableView:(nonnull UITableView *)tv cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RNLILaunch"];
-    //[cell set]
+
     NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:nil ascending:NO selector:@selector(caseInsensitiveCompare:)];
     NSArray *sectKeys = [[[dict objectForKey:@"launches"] allKeys] sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]];
     NSMutableDictionary *sectData = [[dict objectForKey:@"launches"] objectForKey:[sectKeys objectAtIndex:indexPath.section]];
@@ -88,6 +102,7 @@
     if(dict) {
         [[cell textLabel] setText:[NSString stringWithFormat:@"%@ - %@",[cellData objectForKey:@"name"],[cellData objectForKey:@"time"]]];
         [[cell detailTextLabel] setText:[cellData objectForKey:@"date"]];
+        //[cell setValue:cellData forKey:@"ourData"];
     }
     else { [[cell textLabel] setText:@"Loading..."]; }
     return cell;
