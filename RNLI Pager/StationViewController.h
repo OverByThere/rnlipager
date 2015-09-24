@@ -10,6 +10,7 @@
 
 @interface StationViewController : UIViewController {
     IBOutlet UITextView *launchOutput;
+    IBOutlet UILabel *title;
 }
 
 @property NSMutableDictionary *ourDict;

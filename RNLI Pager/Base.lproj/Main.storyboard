@@ -110,12 +110,15 @@
                         <viewControllerLayoutGuide type="bottom" id="Zhc-xG-U5g"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="FSb-Mc-wPD">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GBL-NZ-IGd">
-                                <rect key="frame" x="0.0" y="306" width="320" height="174"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="o42-GA-WPl">
+                                <rect key="frame" x="0.0" y="872" width="320" height="128"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="omA-id-DXX"/>
+                                </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -124,12 +127,15 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Zhc-xG-U5g" firstAttribute="top" secondItem="GBL-NZ-IGd" secondAttribute="bottom" id="VVy-qP-Xqp"/>
+                            <constraint firstItem="o42-GA-WPl" firstAttribute="leading" secondItem="FSb-Mc-wPD" secondAttribute="leadingMargin" constant="-20" id="Gaf-Dc-YM3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="o42-GA-WPl" secondAttribute="trailing" constant="-20" id="NCl-Dn-ksY"/>
+                            <constraint firstItem="Zhc-xG-U5g" firstAttribute="top" secondItem="o42-GA-WPl" secondAttribute="bottom" id="rLz-y1-8Ye"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="1000"/>
                     <connections>
-                        <outlet property="launchOutput" destination="GBL-NZ-IGd" id="fwf-Be-HXP"/>
+                        <outlet property="launchOutput" destination="o42-GA-WPl" id="oYm-Gl-2MT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ejs-mg-k1c" userLabel="First Responder" sceneMemberID="firstResponder"/>
