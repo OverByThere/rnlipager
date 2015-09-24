@@ -19,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"%@",ourDict);
+    
     [launchOutput setText:[NSString stringWithFormat:@"%@",ourDict]];
     // Do any additional setup after loading the view.
 }
