@@ -17,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[[self navigationController] navigationBar] setTranslucent:FALSE]; //http://stackoverflow.com/a/22473381
     getList = [[LazyInternet alloc] init];
     [self refreshData:nil];
     [tableView setDelegate:self];
