@@ -21,6 +21,7 @@
     NSLog(@"%@",ourDict);
     
     [launchOutput setText:[NSString stringWithFormat:@"%@",ourDict]];
+    [stationTitle setText:[NSString stringWithFormat:@"%@",[ourDict objectForKey:@"name"]]];
     // Do any additional setup after loading the view.
 }
 

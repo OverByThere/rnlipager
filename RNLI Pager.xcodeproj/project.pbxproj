@@ -19,6 +19,7 @@
 		96CB62811B98822400DC215E /* RNLI_PagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CB62801B98822400DC215E /* RNLI_PagerUITests.m */; };
 		96CB628F1B9882EC00DC215E /* LazyInternet in Resources */ = {isa = PBXBuildFile; fileRef = 96CB628E1B9882EC00DC215E /* LazyInternet */; };
 		96CB62931B98843800DC215E /* LazyInternet.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CB62921B98843800DC215E /* LazyInternet.m */; };
+		96F53FF01BB588C4006509E3 /* example-station.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96F53FEF1BB588C4006509E3 /* example-station.jpg */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		96CB62821B98822400DC215E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96CB628E1B9882EC00DC215E /* LazyInternet */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LazyInternet; sourceTree = "<group>"; };
 		96CB62921B98843800DC215E /* LazyInternet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LazyInternet.m; path = "RNLI Pager/LazyInternet/LazyInternet.m"; sourceTree = "<group>"; };
+		96F53FEF1BB588C4006509E3 /* example-station.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "example-station.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 		96CB625A1B98822400DC215E /* RNLI Pager */ = {
 			isa = PBXGroup;
 			children = (
+				96F53FEF1BB588C4006509E3 /* example-station.jpg */,
 				37E744AD1BAEF37400D00BCD /* full-logo.png */,
 				96CB628E1B9882EC00DC215E /* LazyInternet */,
 				96CB625E1B98822400DC215E /* AppDelegate.h */,
@@ -263,6 +266,7 @@
 				37E744AE1BAEF37400D00BCD /* full-logo.png in Resources */,
 				96CB62681B98822400DC215E /* Assets.xcassets in Resources */,
 				96CB62661B98822400DC215E /* Main.storyboard in Resources */,
+				96F53FF01BB588C4006509E3 /* example-station.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
