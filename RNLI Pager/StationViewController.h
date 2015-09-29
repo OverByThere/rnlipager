@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LazyInternet/LazyInternet.h"
 
-@interface StationViewController : UIViewController {
+@interface StationViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
     IBOutlet UITextView *launchOutput;
     IBOutlet UILabel *stationTitle;
+    IBOutlet UITableView *tableView;
+    LazyInternet *getList;
+    NSMutableDictionary *launchDict;
 }
 
 @property NSMutableDictionary *ourDict;
